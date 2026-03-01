@@ -1,0 +1,36 @@
+name: Atualizar wiki - CTFs
+
+on:
+  schedule:
+    - cron: '0 0 1,11,21 * *'  # a cada 10 dias
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-events:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run script
+        run: python script.py
+
+      - name: Commit e push modificacoes CTF
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add ctfs.html
+          git commit -m "Auto update dos CTFs" || echo "No changes to commit"
+          git push

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>MackSec Wiki</title>
+
+<style>
+body {
+    background-color: #0d0d0d;
+    color: #00ff9f;
+    font-family: "Courier New", monospace;
+    margin: 0;
+    padding: 40px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3em;
+    text-shadow: 0 0 15px #00ff9f;
+    margin-bottom: 60px;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #111;
+    border: 1px solid #00ff9f;
+    padding: 40px;
+    width: 250px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #00ff9f33;
+    transition: 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 0 25px #00ff9f;
+    transform: translateY(-5px);
+}
+
+a {
+    color: #00ffff;
+    text-decoration: none;
+    font-size: 1.3em;
+}
+
+a:hover {
+    text-shadow: 0 0 8px #00ffff;
+}
+
+.footer {
+    margin-top: 80px;
+    font-size: 0.8em;
+    opacity: 0.7;
+}
+</style>
+</head>
+<body>
+
+<h1> WIKI DO MACKSEC </h1>
+
+<div class="menu">
+    <div class="card">
+        <h2>Próximos CTFs </h2>
+        <p>Veja todos os próximos Capture The Flag.</p>
+        <a href="ctfs.html">Enter →</a>
+    </div>
+
+    <div class="card">
+        <h2>Eventos de cibersegurança </h2>
+        <p>Veja grandes eventos e conferências brasileiras acerca de cibersegurança.</p>
+        <a href="eventos.html">Enter →</a>
+    </div>
+</div>
+
+</body>
+</html>
